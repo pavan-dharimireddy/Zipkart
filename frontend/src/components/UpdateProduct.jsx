@@ -13,9 +13,9 @@ const UpdateProduct = () => {
     brand: "",
     price: "",
     category: "",
-    releaseDate: "",
-    productAvailable: false,
-    stockQuantity: "",
+    releasedate: "",
+    available: false,
+    quantity: "",
   });
 
   useEffect(() => {
@@ -186,10 +186,10 @@ const UpdateProduct = () => {
               type="number"
               className="form-control"
               onChange={handleChange}
-              placeholder={product.stockQuantity}
-              value={updateProduct.stockQuantity}
-              name="stockQuantity"
-              id="stockQuantity"
+              placeholder={product.quantity}
+              value={updateProduct.quantity}
+              name="quantity"
+              id="quantity"
             />
           </div>
           <div className="col-md-8">
@@ -221,11 +221,11 @@ const UpdateProduct = () => {
               <input
                 className="form-check-input"
                 type="checkbox"
-                name="productAvailable"
+                name="available"
                 id="gridCheck"
-                checked={updateProduct.productAvailable}
+                checked={updateProduct.available}
                 onChange={(e) =>
-                  setUpdateProduct({ ...updateProduct, productAvailable: e.target.checked })
+                  setUpdateProduct({ ...updateProduct, available: e.target.checked })
                 }
               />
               <label className="form-check-label">Product Available</label>
